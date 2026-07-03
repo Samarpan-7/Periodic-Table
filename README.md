@@ -2,7 +2,7 @@
 
 A complete, responsive, interactive Periodic Table Web Application built with **Vanilla HTML5, CSS3, and JavaScript (ES6+)**. Fully self-contained with **zero external dependencies** or frameworks.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel)](https://periodic-table-samarpan.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel)](https://periodic-table-b9od.vercel.app)
 ![Elements](https://img.shields.io/badge/Elements-118%20Complete-38bdf8?style=for-the-badge)
 ![Tech Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20JS-f97316?style=for-the-badge)
 ![Dependencies](https://img.shields.io/badge/Dependencies-Zero-22c55e?style=for-the-badge)
@@ -11,19 +11,16 @@ A complete, responsive, interactive Periodic Table Web Application built with **
 
 ## 🌐 Live Demo & Vercel Deployment
 
-- **Live URL**: [https://periodic-table-samarpan.vercel.app](https://periodic-table-samarpan.vercel.app)
+- **Live URL**: [https://periodic-table-b9od.vercel.app](https://periodic-table-b9od.vercel.app)
 - **GitHub Repository**: [https://github.com/Samarpan-7/Periodic-Table.git](https://github.com/Samarpan-7/Periodic-Table.git)
 
-### Deploying to Vercel in 1-Click:
-You can instantly deploy your own live copy of this repository on Vercel by clicking the button below:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSamarpan-7%2FPeriodic-Table.git)
-
-Alternatively, to deploy manually via Vercel Dashboard:
-1. Log in to [Vercel.com](https://vercel.com).
-2. Click **Add New** → **Project**.
-3. Import the GitHub repository: `Samarpan-7/Periodic-Table`.
-4. Keep framework preset as **Other** (Static Site) and click **Deploy**. Vercel will automatically host it live with zero configuration!
+### Deploying to Vercel:
+1. Open [Vercel New Project](https://vercel.com/new).
+2. Import **`Samarpan-7/Periodic-Table`**.
+3. **Project Name**: Choose any name (e.g., `periodic-table-samarpan` or `periodic-table-b9od`).
+4. **Framework Preset**: **Other** (Static Site).
+5. **Root Directory**: `./`
+6. Click **Deploy**! Vercel will host it live instantly.
 
 ---
 

@@ -1,4 +1,4 @@
-#  Interactive Periodic Table of Elements
+## Interactive Periodic Table of Elements
 
 A complete, responsive, interactive Periodic Table Web Application built with **Vanilla HTML5, CSS3, and JavaScript (ES6+)**. Fully self-contained with **zero external dependencies** or frameworks.
 
@@ -18,18 +18,18 @@ A complete, responsive, interactive Periodic Table Web Application built with **
 
 ## 🌟 Features
 
-- ** Complete 118 Elements**: Detailed scientific dataset covering all 118 elements (from Hydrogen to Oganesson).
-- ** Category Colour Coding**: Color-coded elements by chemical categories (Alkali Metals, Noble Gases, Transition Metals, Lanthanides, Actinides, etc.).
-- ** Real-Time Search**: Instant dynamic filtering by **Name**, **Chemical Symbol**, or **Atomic Number**.
-- ** Interactive Category Legend**: Click any category in the legend to highlight matching elements and dim others.
-- ** Interactive Detail Modal ("Big View")**: Clicking an element opens a blurred-backdrop modal showing:
+- **Complete 118 Elements**: Detailed scientific dataset covering all 118 elements (from Hydrogen to Oganesson).
+- **Category Colour Coding**: Color-coded elements by chemical categories (Alkali Metals, Noble Gases, Transition Metals, Lanthanides, Actinides, etc.).
+- **Real-Time Search**: Instant dynamic filtering by **Name**, **Chemical Symbol**, or **Atomic Number**.
+- **Interactive Category Legend**: Click any category in the legend to highlight matching elements and dim others.
+- **Interactive Detail Modal ("Big View")**: Clicking an element opens a blurred-backdrop modal showing:
   - **Hero Card**: Large glowing symbol, atomic mass, state at room temp.
   - **Physical Tab**: State of matter, melting point, boiling point, density, appearance.
   - **Chemical Tab**: Electronegativity, electron configuration, valency, oxidation states, ionisation energy.
   - **Periodic Tab**: Group, Period, Block, atomic radius, covalent radius, electron affinity.
   - **Occurrence & Use Tab**: Natural abundance and commercial/industrial applications.
-- ** Fully Responsive**: CSS Grid layout wrapped in an overflow container for smooth horizontal scrolling on mobile screens.
-- ** Futuristic Dark Mode**: Modern dark aesthetic (`#0b0f19`) with atomic nucleus animation and glowing element highlights.
+- **Fully Responsive**: CSS Grid layout wrapped in an overflow container for smooth horizontal scrolling on mobile screens.
+- **Futuristic Dark Mode**: Modern dark aesthetic (`#0b0f19`) with atomic nucleus animation and glowing element highlights.
 
 ---
 

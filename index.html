@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periodic Table — Interactive Futuristic Edition</title>
+  <meta name="description" content="Explore all 118 elements in a stunning interactive futuristic periodic table with detailed physical, chemical, and periodic properties, real-time search, and animated modals.">
+  <meta name="keywords" content="periodic table, elements, chemistry, interactive, futuristic, atomic number, chemical symbol">
+  <meta name="theme-color" content="#0b0f19">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animated Background Grid -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-radial" aria-hidden="true"></div>
+
+  <div id="app">
+
+    <!-- ══════════════════════════ HEADER ══════════════════════════ -->
+    <header class="app-header">
+      <div class="header-glow" aria-hidden="true"></div>
+      <div class="header-inner">
+        <div class="logo-group">
+          <div class="atom-spinner" aria-hidden="true">
+            <div class="nucleus"></div>
+            <div class="orbit orbit-1"><div class="electron"></div></div>
+            <div class="orbit orbit-2"><div class="electron"></div></div>
+            <div class="orbit orbit-3"><div class="electron"></div></div>
+          </div>
+          <div>
+            <h1 class="app-title">Periodic Table</h1>
+            <p class="app-subtitle">118 Elements &middot; Interactive &middot; Futuristic Edition</p>
+          </div>
+        </div>
+        <div class="header-badges">
+          <div class="badge" id="totalBadge">
+            <span class="badge-num">118</span>
+            <span class="badge-lbl">Elements</span>
+          </div>
+          <div class="badge" id="visibleBadge">
+            <span class="badge-num" id="visibleCount">118</span>
+            <span class="badge-lbl">Visible</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══════════════════════════ CONTROLS ══════════════════════════ -->
+    <section class="controls-section" aria-label="Search and Filter Controls">
+      <div class="controls-inner">
+        <!-- Search bar -->
+        <div class="search-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input
+            type="search"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search by name, symbol, or atomic number…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search elements"
+          >
+          <button id="clearSearchBtn" class="clear-btn" aria-label="Clear search" title="Clear search" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12" aria-hidden="true">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Category dropdown -->
+        <div class="select-wrapper">
+          <svg class="select-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/>
+          </svg>
+          <select id="categoryFilter" class="category-select" aria-label="Filter by category">
+            <option value="">All Categories</option>
+            <option value="alkali-metal">Alkali Metals</option>
+            <option value="alkaline-earth">Alkaline Earth Metals</option>
+            <option value="transition-metal">Transition Metals</option>
+            <option value="lanthanide">Lanthanides</option>
+            <option value="actinide">Actinides</option>
+            <option value="post-transition">Post-transition Metals</option>
+            <option value="metalloid">Metalloids</option>
+            <option value="reactive-nonmetal">Reactive Non-metals</option>
+            <option value="halogen">Halogens</option>
+            <option value="noble-gas">Noble Gases</option>
+          </select>
+          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </div>
+
+        <!-- Reset button -->
+        <button id="resetBtn" class="reset-btn" aria-label="Reset all filters">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+          </svg>
+          Reset
+        </button>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ LEGEND ══════════════════════════ -->
+    <section class="legend-section" aria-label="Element Category Legend">
+      <div class="legend-inner" id="legend" role="list">
+        <!-- Populated by app.js -->
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ PERIODIC TABLE ══════════════════════════ -->
+    <main class="table-section">
+      <div class="table-scroll-container" role="region" aria-label="Periodic Table of Elements">
+        <div id="periodicGrid" class="periodic-grid" role="grid">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </main>
+
+    <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+    <footer class="app-footer">
+      <p>All Rights Reserved to Samarpan</p>
+    </footer>
+
+  </div><!-- /#app -->
+
+  <!-- ══════════════════════════ MODAL OVERLAY ══════════════════════════ -->
+  <div
+    id="modalOverlay"
+    class="modal-overlay"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalElementName"
+  >
+    <!-- Click backdrop to close -->
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+
+    <div class="modal-container" id="modalContainer">
+
+      <!-- Close button -->
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close element details">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+
+        <!-- LEFT: Hero card -->
+        <div class="modal-hero" id="modalHero">
+          <!-- Populated by app.js -->
+        </div>
+
+        <!-- RIGHT: Tabbed properties -->
+        <div class="modal-props">
+
+          <!-- Tab Navigation -->
+          <nav class="tab-nav" id="tabNav" aria-label="Element property tabs">
+            <button class="tab-btn active" data-tab="physical" aria-selected="true">
+              <span class="tab-icon" aria-hidden="true">🔬</span>
+              Physical
+            </button>
+            <button class="tab-btn" data-tab="chemical" aria-selected="false">
+              <span class="tab-icon" aria-hidden="true">⚗️</span>
+              Chemical
+            </button>
+            <button class="tab-btn" data-tab="periodic" aria-selected="false">
+              <span class="tab-icon" aria-hidden="true">📐</span>
+              Periodic
+            </button>
+            <button class="tab-btn" data-tab="occurrence" aria-selected="false">
+              <span class="tab-icon" aria-hidden="true">🌍</span>
+              Occurrence
+            </button>
+          </nav>
+
+          <!-- Tab Content Panel -->
+          <div class="tab-panel" id="tabPanel" role="tabpanel">
+            <!-- Populated by app.js -->
+          </div>
+
+        </div><!-- /.modal-props -->
+
+      </div><!-- /.modal-body -->
+
+    </div><!-- /.modal-container -->
+
+  </div><!-- /#modalOverlay -->
+
+  <script src="app.js"></script>
+</body>
+</html>

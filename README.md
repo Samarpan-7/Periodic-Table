@@ -1,4 +1,4 @@
-## Interactive Periodic Table of Elements
+#  Interactive Periodic Table of Elements
 
 A complete, responsive, interactive Periodic Table Web Application built with **Vanilla HTML5, CSS3, and JavaScript (ES6+)**. Fully self-contained with **zero external dependencies** or frameworks.
 
@@ -11,8 +11,8 @@ A complete, responsive, interactive Periodic Table Web Application built with **
 
 ## 🌐 Live Demo & Repository
 
-- ** Live App**: [https://periodic-table-7.vercel.app/](https://periodic-table-7.vercel.app/)
-- ** GitHub Repository**: [https://github.com/Samarpan-7/Periodic-Table.git](https://github.com/Samarpan-7/Periodic-Table.git)
+- **Live App**: [https://periodic-table-7.vercel.app/](https://periodic-table-7.vercel.app/)
+- **GitHub Repository**: [https://github.com/Samarpan-7/Periodic-Table.git](https://github.com/Samarpan-7/Periodic-Table.git)
 
 ---
 

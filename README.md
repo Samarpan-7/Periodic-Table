@@ -2,25 +2,17 @@
 
 A complete, responsive, interactive Periodic Table Web Application built with **Vanilla HTML5, CSS3, and JavaScript (ES6+)**. Fully self-contained with **zero external dependencies** or frameworks.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel)](https://periodic-table-b9od.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel)](https://periodic-table-7.vercel.app/)
 ![Elements](https://img.shields.io/badge/Elements-118%20Complete-38bdf8?style=for-the-badge)
 ![Tech Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20JS-f97316?style=for-the-badge)
 ![Dependencies](https://img.shields.io/badge/Dependencies-Zero-22c55e?style=for-the-badge)
 
 ---
 
-## 🌐 Live Demo & Vercel Deployment
+## 🌐 Live Demo & Repository
 
-- **Live URL**: [https://periodic-table-b9od.vercel.app](https://periodic-table-b9od.vercel.app)
-- **GitHub Repository**: [https://github.com/Samarpan-7/Periodic-Table.git](https://github.com/Samarpan-7/Periodic-Table.git)
-
-### Deploying to Vercel:
-1. Open [Vercel New Project](https://vercel.com/new).
-2. Import **`Samarpan-7/Periodic-Table`**.
-3. **Project Name**: Choose any name (e.g., `periodic-table-samarpan` or `periodic-table-b9od`).
-4. **Framework Preset**: **Other** (Static Site).
-5. **Root Directory**: `./`
-6. Click **Deploy**! Vercel will host it live instantly.
+- **🚀 Live App**: [https://periodic-table-7.vercel.app/](https://periodic-table-7.vercel.app/)
+- **📦 GitHub Repository**: [https://github.com/Samarpan-7/Periodic-Table.git](https://github.com/Samarpan-7/Periodic-Table.git)
 
 ---
 
@@ -90,7 +82,6 @@ Periodic-Table/
 ├── index.html     # Main HTML structure and modal overlays
 ├── style.css      # Futuristic dark mode styling, layout grid, and animations
 ├── app.js         # Complete dataset for all 118 elements & dynamic logic
-├── vercel.json    # Vercel static site configuration
 └── README.md      # Project documentation, live links, and usage guide
 ```
 
